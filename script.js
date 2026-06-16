@@ -693,3 +693,12 @@ updateGreeting();
 // Day 37: Dynamic copyright year
 const yearSpan = document.getElementById('current-year');
 if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+// Day 38: Page load time
+const startTime = performance.now();
+window.addEventListener('load', () => {
+  const loadTimeSpan = document.getElementById('load-time');
+  if (loadTimeSpan) {
+    const loadTime = ((performance.now() - startTime) / 1000).toFixed(2);
+    loadTimeSpan.textContent = `⏱️ Page loaded in ${loadTime}s`;
+  }
+});

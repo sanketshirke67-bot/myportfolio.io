@@ -1189,3 +1189,15 @@ body.light-mode .last-commit-date {
   color: #888;
   margin-top: 5px;
 }
+.greeting-message {
+  font-size: 0.85rem;
+  margin-top: 8px;
+  color: #e94560;
+  font-weight: 500;
+}
+.load-time {
+  font-size: 0.7rem;
+  color: #666;
+  margin-top: 4px;
+  opacity: 0.7;
+}
