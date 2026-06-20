@@ -1201,3 +1201,9 @@ body.light-mode .last-commit-date {
   margin-top: 4px;
   opacity: 0.7;
 }
+/* Active nav link */
+.nav-links a.active {
+  color: #e94560;
+  border-bottom: 2px solid #e94560;
+  padding-bottom: 4px;
+}

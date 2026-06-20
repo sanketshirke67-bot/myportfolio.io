@@ -702,3 +702,22 @@ window.addEventListener('load', () => {
     loadTimeSpan.textContent = `⏱️ Page loaded in ${loadTime}s`;
   }
 });
+// Day 40: Active navigation link highlighting
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${id}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+}, { threshold: 0.4 }); // 40% of the section visible triggers the change
+
+sections.forEach(section => observer.observe(section));s
