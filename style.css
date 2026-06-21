@@ -1207,3 +1207,36 @@ body.light-mode .last-commit-date {
   border-bottom: 2px solid #e94560;
   padding-bottom: 4px;
 }
+/* Navbar scroll progress */
+.nav-progress-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  max-width: 200px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.nav-progress-bar {
+  height: 4px;
+  background: #e94560;
+  border-radius: 4px;
+  width: 0%;
+  transition: width 0.1s;
+  flex: 1;
+}
+.nav-progress-text {
+  font-size: 0.7rem;
+  color: #888;
+  font-weight: 600;
+  min-width: 30px;
+  text-align: right;
+}
+body.light-mode .nav-progress-text {
+  color: #555;
+}
+@media (max-width: 768px) {
+  .nav-progress-container {
+    display: none;
+  }
+}

@@ -721,3 +721,22 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.4 }); // 40% of the section visible triggers the change
 
 sections.forEach(section => observer.observe(section));s
+// Day 41: Scroll progress indicator in navbar
+const navProgress = document.getElementById('nav-progress-bar');
+const navProgressText = document.getElementById('nav-progress-text');
+const navProgressContainer = document.querySelector('.nav-progress-container');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  if (navProgress) navProgress.style.width = `${percent}%`;
+  if (navProgressText) navProgressText.textContent = `${Math.floor(percent)}%`;
+});
+
+// Click on progress bar to scroll to top
+if (navProgressContainer) {
+  navProgressContainer.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
