@@ -740,3 +740,27 @@ if (navProgressContainer) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+// Day 42: Copy section link on hover
+document.querySelectorAll('section h2').forEach(heading => {
+  // Create the link icon
+  const icon = document.createElement('span');
+  icon.className = 'section-link-icon';
+  icon.textContent = '🔗';
+  icon.title = 'Copy link to this section';
+  heading.appendChild(icon);
+  
+  // Get the section ID from the parent section
+  const section = heading.closest('section[id]');
+  if (section) {
+    const sectionId = section.id;
+    icon.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const url = `${window.location.origin}${window.location.pathname}#${sectionId}`;
+      navigator.clipboard.writeText(url).then(() => {
+        showToast(`📋 Copied link to "${heading.textContent.replace('🔗', '').trim()}"`, 'success');
+      }).catch(() => {
+        showToast('Failed to copy link', 'error');
+      });
+    });
+  }
+});

@@ -1240,3 +1240,19 @@ body.light-mode .nav-progress-text {
     display: none;
   }
 }
+/* Copy section link icon */
+.section-link-icon {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 1rem;
+  color: #e94560;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+h2:hover .section-link-icon {
+  opacity: 1;
+}
+.section-link-icon:hover {
+  transform: scale(1.2);
+}
