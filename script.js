@@ -764,3 +764,9 @@ document.querySelectorAll('section h2').forEach(heading => {
     });
   }
 });
+// Day 43: Press 'T' to scroll to top
+if (e.key === 't' || e.key === 'T') {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  showToast('⬆️ Scrolled to top!', 'success');
+}
