@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio | Sanket Shirke – 41 Days of Progress</title>
+  <title>My Portfolio | Sanket Shirke – 43 Days of Progress</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Custom Cursor -->
   <div class="cursor"></div>
   <div class="cursor-follower"></div>
 
@@ -16,8 +17,8 @@
     <nav class="navbar">
       <div class="logo">Sanket</div>
       <div class="nav-progress-container">
-      <div class="nav-progress-bar" id="nav-progress-bar"></div>
-      <span class="nav-progress-text" id="nav-progress-text">0%</span>
+        <div class="nav-progress-bar" id="nav-progress-bar"></div>
+        <span class="nav-progress-text" id="nav-progress-text">0%</span>
       </div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
@@ -86,7 +87,7 @@
         <div class="stats">
           <div class="stat-item"><i class="fas fa-code"></i><span class="stat-number" data-target="15">0</span><p>Projects Completed</p></div>
           <div class="stat-item"><i class="fas fa-coffee"></i><span class="stat-number" data-target="50">0</span><p>Cups of Coffee</p></div>
-          <div class="stat-item"><i class="fas fa-calendar-alt"></i><span class="stat-number" data-target="33">0</span><p>Days of Learning</p></div>
+          <div class="stat-item"><i class="fas fa-calendar-alt"></i><span class="stat-number" data-target="43">0</span><p>Days of Learning</p></div>
           <div class="stat-item"><i class="fas fa-eye"></i><span class="stat-number" id="visitor-count">0</span><p>Visitors</p></div>
         </div>
       </div>
@@ -95,7 +96,7 @@
     <!-- GitHub Projects -->
     <section id="projects" class="projects">
       <div class="container">
-        <h2>My GitHub Projects</h2>
+        <h2 id="projects-heading">My GitHub Projects</h2>
         <div class="projects-controls">
           <input type="text" id="project-search" placeholder="Search projects..." class="search-input" />
           <div class="filter-buttons">
@@ -151,21 +152,21 @@
         <div class="blog-grid">
           <article class="blog-card">
             <h3>How I Started My Web Dev Journey</h3>
-            <p class="blog-date">April 21, 2025</p>
+            <p class="blog-date">June 20, 2025</p>
             <div class="reading-time">⏱️ <span>0</span> min read</div>
             <p>It all began with a simple "Hello World". I remember opening my first HTML file in a browser and feeling amazed. That small spark turned into a daily habit of learning and building. From static pages to interactive portfolios, every line of code taught me something new.</p>
             <a href="#" class="read-more">Read More →</a>
           </article>
           <article class="blog-card">
             <h3>5 CSS Tricks Every Beginner Should Know</h3>
-            <p class="blog-date">April 20, 2025</p>
+            <p class="blog-date">June 19, 2025</p>
             <div class="reading-time">⏱️ <span>0</span> min read</div>
             <p>CSS can be tricky, but mastering a few techniques can transform your designs. First, flexbox – it's a game-changer for layouts. Second, CSS Grid for complex structures. Third, custom properties (variables) to keep your code DRY. Fourth, transitions and animations. Fifth, media queries for responsive design.</p>
             <a href="#" class="read-more">Read More →</a>
           </article>
           <article class="blog-card">
             <h3>Why I'm Documenting My Learning Daily</h3>
-            <p class="blog-date">April 19, 2025</p>
+            <p class="blog-date">June 18, 2025</p>
             <div class="reading-time">⏱️ <span>0</span> min read</div>
             <p>Building in public keeps me accountable. Each day I add a small feature to my portfolio and write about it. This practice not only solidifies my knowledge but also creates a visible progress track for potential employers. Plus, it's motivating to see how many consecutive days I've worked.</p>
             <a href="#" class="read-more">Read More →</a>
@@ -212,9 +213,49 @@
       <div class="container">
         <h2>Daily Learning Log</h2>
         <div class="timeline">
-          <div class="timeline-item"><div class="timeline-date">Day 41</div><div class="timeline-content">
-            <h3>Keyboard Shortcut 'T' to Scroll to Top</h3>
-            <p>Press 'T' anywhere to smoothly scroll back to the top – even faster than the button.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 43</div><div class="timeline-content"><h3>Keyboard Shortcut 'T' to Scroll to Top</h3><p>Press 'T' anywhere to smoothly scroll back to the top – even faster than the button.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 42</div><div class="timeline-content"><h3>Copy Section Link on Heading Hover</h3><p>Hover over any section heading and click the 🔗 icon to copy a direct link to that part of the page.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 41</div><div class="timeline-content"><h3>Scroll Progress Indicator in Navbar</h3><p>A small progress bar in the navbar shows how far you've scrolled – click it to go back to top.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 40</div><div class="timeline-content"><h3>Active Navigation Link Highlighting</h3><p>As you scroll, the current section's navigation link is highlighted – making it easier to know where you are.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 39</div><div class="timeline-content"><h3>Show Total Project Count in Heading</h3><p>The projects section now displays the total number of repositories – a quick snapshot of my work.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 38</div><div class="timeline-content"><h3>Page Load Time Display</h3><p>The footer now shows how long the page took to load – a subtle tech touch.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 37</div><div class="timeline-content"><h3>Dynamic Copyright Year</h3><p>The footer year updates automatically – no need to change it manually.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 36</div><div class="timeline-content"><h3>Time‑Based Greeting</h3><p>The footer now shows "Good morning/afternoon/evening" based on your local time – a small warm touch.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 35</div><div class="timeline-content"><h3>Random Programming Quote on Hover</h3><p>Hover over any project card to see a random programming quote – a little inspiration while exploring.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 34</div><div class="timeline-content"><h3>Double-Click Empty Space to Scroll to Top</h3><p>Double-click anywhere on the page background (not on buttons or cards) to smoothly return to the top.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 33</div><div class="timeline-content"><h3>Random Developer Tip on Page Load</h3><p>Every visit shows a random helpful tip or quote – makes the portfolio more engaging.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 32</div><div class="timeline-content"><h3>Click to Dismiss Toast Notifications</h3><p>You can now click any toast message to dismiss it immediately – no need to wait.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 31</div><div class="timeline-content"><h3>Last Synced Timestamp for GitHub Projects</h3><p>Shows when the projects list was last refreshed – helps users know if data is current.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 30</div><div class="timeline-content"><h3>Export Streak Data as JSON</h3><p>Added a button to download your work streak data – great for backup or analysis.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 29</div><div class="timeline-content"><h3>Last Commit Date on Project Cards</h3><p>Each project now shows when it was last updated – helps visitors see active projects at a glance.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 28</div><div class="timeline-content"><h3>Double-Click Project Card to Open Repo</h3><p>Double-click anywhere on a project card to open the GitHub repository in a new tab – faster navigation.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 27</div><div class="timeline-content"><h3>Smooth Back to Top with Progress Ring Animation</h3><p>The back-to-top button now animates smoothly, and the scroll progress ring updates in real time.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 26</div><div class="timeline-content"><h3>Language Badge on Project Cards</h3><p>Each project now shows a small badge with its primary language (e.g., JavaScript, HTML).</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 25</div><div class="timeline-content"><h3>Keyboard Shortcut 'R' for Random Project</h3><p>Press 'R' anywhere to open a random GitHub repository from your projects list.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 24</div><div class="timeline-content"><h3>Keyboard Shortcut 'L' to Copy Link</h3><p>Press 'L' anywhere to copy the current page URL – a faster way to share.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 23</div><div class="timeline-content"><h3>Keyboard Shortcuts Help</h3><p>Press '?' anywhere on the page to see a list of all available keyboard shortcuts.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 22</div><div class="timeline-content"><h3>Click to Copy Repo Name</h3><p>Click any project card title – the repository name is copied to your clipboard instantly.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 21</div><div class="timeline-content"><h3>Reading Time for Blog Posts</h3><p>Added estimated reading time to each blog article – a small but useful UX improvement.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 20</div><div class="timeline-content"><h3>Easter Egg: Hidden Surprise</h3><p>Click the logo 3 times fast – a secret message appears. Just for fun!</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 19</div><div class="timeline-content"><h3>Random Project Button</h3><p>Added a button that opens a random GitHub repository from my list – great for exploration.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 18</div><div class="timeline-content"><h3>Copy Link Button</h3><p>Added a footer button to copy the current page URL – makes sharing easy.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 17</div><div class="timeline-content"><h3>Streak Calendar</h3><p>Added a visual calendar to track consecutive days I've worked on this project. Uses localStorage.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 16</div><div class="timeline-content"><h3>Keyboard Shortcut for Dark Mode</h3><p>Press 'D' to toggle dark/light mode – a small accessibility and power‑user improvement.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 15</div><div class="timeline-content"><h3>Toggle Project Details</h3><p>Added a button to each GitHub project card that shows extra info (stars, forks, last update).</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 14</div><div class="timeline-content"><h3>Visit Counter with Welcome Back</h3><p>Shows how many times you've visited and a friendly welcome message using localStorage.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 13</div><div class="timeline-content"><h3>Show Most Recent Repository</h3><p>Displays which GitHub repo was last updated – shows active work.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 12</div><div class="timeline-content"><h3>Copy Email Button</h3><p>Added a one-click copy email button to the contact section – small but handy.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 11</div><div class="timeline-content"><h3>Fixed Empty Issues & PRs</h3><p>Added repo selector, refresh button, demo data fallback, and better error handling.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 10</div><div class="timeline-content"><h3>Loading Skeletons & Accessibility</h3><p>Added loading skeletons, last updated timestamp, ARIA labels, back-to-top animation.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 9</div><div class="timeline-content"><h3>GitHub Activity: PRs, Issues, Code Reviews</h3><p>Fetch and display pull requests and issues from a repo, show code review completion percentage.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 8</div><div class="timeline-content"><h3>Load More, Search, Custom Cursor</h3><p>Pagination for GitHub repos, search bar, scroll progress ring, custom cursor, toast notifications.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 7</div><div class="timeline-content"><h3>EmailJS, Filter, Circular Skills</h3><p>Contact form with EmailJS, project language filter, circular skill indicators, live visitor count.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 6</div><div class="timeline-content"><h3>Dynamic GitHub & Carousel</h3><p>Live GitHub repos, testimonials carousel, particle background, more polish.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 5</div><div class="timeline-content"><h3>Advanced Features</h3><p>Typing animation, project modals, blog section, count-up stats, back-to-top button.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 4</div><div class="timeline-content"><h3>Enhanced Portfolio</h3><p>Skills section, daily learning log, working contact form, scroll animations, mobile menu.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 3</div><div class="timeline-content"><h3>Full Portfolio Layout</h3><p>Built multi-section portfolio with dark mode toggle and smooth scroll.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 2</div><div class="timeline-content"><h3>Typography & Hover Effects</h3><p>Added Google Fonts, improved button animations, and color scheme.</p></div></div>
+          <div class="timeline-item"><div class="timeline-date">Day 1</div><div class="timeline-content"><h3>HTML/CSS Basics</h3><p>Created a simple card, learned about flexbox and basic styling.</p></div></div>
         </div>
       </div>
     </section>
@@ -237,11 +278,11 @@
   </main>
 
   <footer>
-  <p>&copy; <span id="2026-"></span> Sanket Shirke. Built with ❤️ for my learning journey.</p>
-  <p id="visit-message" class="visit-message"></p>
-  <p id="greeting" class="greeting-message"></p>
-  <p id="load-time" class="load-time"></p>
-  <button id="copy-link-btn" class="copy-link-btn">🔗 Copy Link</button>
+    <p>&copy; <span id="current-year"></span> Sanket Shirke. Built with ❤️ for my learning journey.</p>
+    <p id="visit-message" class="visit-message"></p>
+    <p id="greeting" class="greeting-message"></p>
+    <p id="load-time" class="load-time"></p>
+    <button id="copy-link-btn" class="copy-link-btn">🔗 Copy Link</button>
   </footer>
 
   <button id="back-to-top" aria-label="Back to top">↑</button>
