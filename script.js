@@ -881,3 +881,12 @@ if (contactForm) {
     showToast('EmailJS not configured – this would send!', 'info');
   });
 }
+// Day 44: Press 'S' to scroll to Skills section
+if (e.key === 's' || e.key === 'S') {
+  e.preventDefault();
+  const skillsSection = document.getElementById('skills');
+  if (skillsSection) {
+    skillsSection.scrollIntoView({ behavior: 'smooth' });
+    showToast('⬇️ Scrolling to Skills!', 'success');
+  }
+}
