@@ -890,3 +890,12 @@ if (e.key === 's' || e.key === 'S') {
     showToast('⬇️ Scrolling to Skills!', 'success');
   }
 }
+// Day 45: Press 'P' to scroll to Projects section
+if (e.key === 'p' || e.key === 'P') {
+  e.preventDefault();
+  const projectsSection = document.getElementById('projects');
+  if (projectsSection) {
+    projectsSection.scrollIntoView({ behavior: 'smooth' });
+    showToast('⬇️ Scrolling to Projects!', 'success');
+  }
+}
