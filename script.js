@@ -899,3 +899,12 @@ if (e.key === 'p' || e.key === 'P') {
     showToast('⬇️ Scrolling to Projects!', 'success');
   }
 }
+// Day 46: Press 'C' to scroll to Contact section
+if (e.key === 'c' || e.key === 'C') {
+  e.preventDefault();
+  const contactSection = document.getElementById('contact');
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+    showToast('⬇️ Scrolling to Contact!', 'success');
+  }
+}
