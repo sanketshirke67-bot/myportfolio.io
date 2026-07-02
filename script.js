@@ -908,3 +908,12 @@ if (e.key === 'c' || e.key === 'C') {
     showToast('⬇️ Scrolling to Contact!', 'success');
   }
 }
+// Day 47: Press 'B' to scroll to Blog section
+if (e.key === 'b' || e.key === 'B') {
+  e.preventDefault();
+  const blogSection = document.getElementById('blog');
+  if (blogSection) {
+    blogSection.scrollIntoView({ behavior: 'smooth' });
+    showToast('⬇️ Scrolling to Blog!', 'success');
+  }
+}
