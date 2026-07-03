@@ -917,3 +917,12 @@ if (e.key === 'b' || e.key === 'B') {
     showToast('⬇️ Scrolling to Blog!', 'success');
   }
 }
+// Day 48: Press 'G' to scroll to GitHub Activity section
+if (e.key === 'g' || e.key === 'G') {
+  e.preventDefault();
+  const activitySection = document.getElementById('github-activity');
+  if (activitySection) {
+    activitySection.scrollIntoView({ behavior: 'smooth' });
+    showToast('⬇️ Scrolling to GitHub Activity!', 'success');
+  }
+}
