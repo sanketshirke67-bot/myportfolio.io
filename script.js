@@ -720,7 +720,7 @@ document.addEventListener('mouseleave', () => { cursor.style.display = 'none';
 document.addEventListener('mouseenter', () => { cursor.style.display = 'block';
   cursorFollower.style.display = 'block'; });
 
-// ========== KEYBOARD SHORTCUTS ==========
+// ========== KEYBOARD SHORTCUTS (Days 16, 23, 24, 25, 43, 44, 45, 46, 47, 48) ==========
 document.addEventListener('keydown', (e) => {
   // Day 16: 'D' for dark mode
   if (e.key === 'd' || e.key === 'D') {
@@ -731,7 +731,7 @@ document.addEventListener('keydown', (e) => {
   // Day 23: '?' for help
   if (e.key === '?' || (e.shiftKey && e.key === '/')) {
     e.preventDefault();
-    showToast('⌨️ Shortcuts: D (dark mode), L (copy link), R (random project), T (scroll to top), ? (help)', 'info');
+    showToast('⌨️ Shortcuts: D (dark mode), L (copy link), R (random project), T (scroll to top), S (skills), P (projects), C (contact), B (blog), G (GitHub activity), ? (help)', 'info');
   }
   // Day 24: 'L' for copy link
   if (e.key === 'l' || e.key === 'L') {
@@ -750,6 +750,51 @@ document.addEventListener('keydown', (e) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     showToast('⬆️ Scrolled to top!', 'success');
   }
+  // Day 44: 'S' for scroll to Skills
+  if (e.key === 's' || e.key === 'S') {
+    e.preventDefault();
+    const skillsSection = document.getElementById('skills');
+    if (skillsSection) {
+      skillsSection.scrollIntoView({ behavior: 'smooth' });
+      showToast('⬇️ Scrolling to Skills!', 'success');
+    }
+  }
+  // Day 45: 'P' for scroll to Projects
+  if (e.key === 'p' || e.key === 'P') {
+    e.preventDefault();
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+      showToast('⬇️ Scrolling to Projects!', 'success');
+    }
+  }
+  // Day 46: 'C' for scroll to Contact
+  if (e.key === 'c' || e.key === 'C') {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      showToast('⬇️ Scrolling to Contact!', 'success');
+    }
+  }
+  // Day 47: 'B' for scroll to Blog
+  if (e.key === 'b' || e.key === 'B') {
+    e.preventDefault();
+    const blogSection = document.getElementById('blog');
+    if (blogSection) {
+      blogSection.scrollIntoView({ behavior: 'smooth' });
+      showToast('⬇️ Scrolling to Blog!', 'success');
+    }
+  }
+  // Day 48: 'G' for scroll to GitHub Activity
+  if (e.key === 'g' || e.key === 'G') {
+    e.preventDefault();
+    const activitySection = document.getElementById('github-activity');
+    if (activitySection) {
+      activitySection.scrollIntoView({ behavior: 'smooth' });
+      showToast('⬇️ Scrolling to GitHub Activity!', 'success');
+    }
+  }
 });
 
 // ========== RANDOM DEVELOPER TIP ON LOAD (Day 33) ==========
@@ -761,7 +806,8 @@ const tips = [
   '🎨 Press "D" for dark mode.',
   '📁 Export streak data with the button.',
   '🚀 "The best way to predict the future is to create it."',
-  '📌 Press "T" to scroll to top instantly.'
+  '📌 Press "T" to scroll to top instantly.',
+  '📌 Press "S" for Skills, "P" for Projects, "C" for Contact, "B" for Blog, "G" for Activity.'
 ];
 setTimeout(() => {
   const tip = tips[Math.floor(Math.random() * tips.length)];
@@ -880,49 +926,4 @@ if (contactForm) {
     }
     showToast('EmailJS not configured – this would send!', 'info');
   });
-}
-// Day 44: Press 'S' to scroll to Skills section
-if (e.key === 's' || e.key === 'S') {
-  e.preventDefault();
-  const skillsSection = document.getElementById('skills');
-  if (skillsSection) {
-    skillsSection.scrollIntoView({ behavior: 'smooth' });
-    showToast('⬇️ Scrolling to Skills!', 'success');
-  }
-}
-// Day 45: Press 'P' to scroll to Projects section
-if (e.key === 'p' || e.key === 'P') {
-  e.preventDefault();
-  const projectsSection = document.getElementById('projects');
-  if (projectsSection) {
-    projectsSection.scrollIntoView({ behavior: 'smooth' });
-    showToast('⬇️ Scrolling to Projects!', 'success');
-  }
-}
-// Day 46: Press 'C' to scroll to Contact section
-if (e.key === 'c' || e.key === 'C') {
-  e.preventDefault();
-  const contactSection = document.getElementById('contact');
-  if (contactSection) {
-    contactSection.scrollIntoView({ behavior: 'smooth' });
-    showToast('⬇️ Scrolling to Contact!', 'success');
-  }
-}
-// Day 47: Press 'B' to scroll to Blog section
-if (e.key === 'b' || e.key === 'B') {
-  e.preventDefault();
-  const blogSection = document.getElementById('blog');
-  if (blogSection) {
-    blogSection.scrollIntoView({ behavior: 'smooth' });
-    showToast('⬇️ Scrolling to Blog!', 'success');
-  }
-}
-// Day 48: Press 'G' to scroll to GitHub Activity section
-if (e.key === 'g' || e.key === 'G') {
-  e.preventDefault();
-  const activitySection = document.getElementById('github-activity');
-  if (activitySection) {
-    activitySection.scrollIntoView({ behavior: 'smooth' });
-    showToast('⬇️ Scrolling to GitHub Activity!', 'success');
-  }
 }
