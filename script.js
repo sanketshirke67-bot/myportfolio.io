@@ -936,3 +936,8 @@ if (e.key === 'a' || e.key === 'A') {
     showToast('⬇️ Scrolling to About!', 'success');
   }
 }
+// Day 50: Console easter egg – hidden developer message
+console.log('%c🎉 Happy 50 Days of Learning! 🎉', 'font-size: 24px; font-weight: bold; color: #e94560;');
+console.log('%cThis portfolio was built over 50 consecutive days – each day adding a small improvement.', 'font-size: 14px; color: #888;');
+console.log('%c🚀 Keep building, keep learning!', 'font-size: 16px; color: #e94560; font-weight: bold;');
+console.log('%c👨‍💻 If you\'re seeing this, you\'re a true developer!', 'font-size: 14px; color: #4caf50;');
