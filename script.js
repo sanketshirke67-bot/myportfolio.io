@@ -927,3 +927,12 @@ if (contactForm) {
     showToast('EmailJS not configured – this would send!', 'info');
   });
 }
+// Day 49: Press 'A' to scroll to About section
+if (e.key === 'a' || e.key === 'A') {
+  e.preventDefault();
+  const aboutSection = document.getElementById('about');
+  if (aboutSection) {
+    aboutSection.scrollIntoView({ behavior: 'smooth' });
+    showToast('⬇️ Scrolling to About!', 'success');
+  }
+}
