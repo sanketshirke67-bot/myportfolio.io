@@ -941,3 +941,13 @@ console.log('%c🎉 Happy 50 Days of Learning! 🎉', 'font-size: 24px; font-wei
 console.log('%cThis portfolio was built over 50 consecutive days – each day adding a small improvement.', 'font-size: 14px; color: #888;');
 console.log('%c🚀 Keep building, keep learning!', 'font-size: 16px; color: #e94560; font-weight: bold;');
 console.log('%c👨‍💻 If you\'re seeing this, you\'re a true developer!', 'font-size: 14px; color: #4caf50;');
+// Day 51: Share on Twitter button
+const shareTwitterBtn = document.getElementById('share-twitter-btn');
+if (shareTwitterBtn) {
+  shareTwitterBtn.addEventListener('click', () => {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent('Check out my portfolio built over 50 days of learning! 🚀');
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+    window.open(twitterUrl, '_blank', 'width=600,height=400');
+  });
+}
