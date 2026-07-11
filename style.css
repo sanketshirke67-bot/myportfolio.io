@@ -725,6 +725,30 @@ footer {
   cursor: pointer;
   margin-top: 10px;
 }
+.share-btn {
+  background: none;
+  border: 1px solid #e94560;
+  color: #e94560;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s;
+  margin-left: 10px;
+}
+.share-btn:hover {
+  background: #e94560;
+  color: white;
+}
+.twitter-btn {
+  border-color: #1da1f2;
+  color: #1da1f2;
+}
+.twitter-btn:hover {
+  background: #1da1f2;
+  color: white;
+}
 
 /* ---------- BACK TO TOP ---------- */
 #back-to-top {
@@ -863,28 +887,4 @@ body.light-mode .toast {
   .copy-btn {
     width: 100%;
   }
-}
-/* Share buttons */
-.share-btn {
-  background: none;
-  border: 1px solid #e94560;
-  color: #e94560;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: all 0.2s;
-}
-.share-btn:hover {
-  background: #e94560;
-  color: white;
-}
-.twitter-btn {
-  border-color: #1da1f2;
-  color: #1da1f2;
-}
-.twitter-btn:hover {
-  background: #1da1f2;
-  color: white;
 }

@@ -588,6 +588,17 @@ document.getElementById('copy-link-btn')?.addEventListener('click', () => {
     .catch(() => showToast('Failed', 'error'));
 });
 
+// ========== SHARE ON TWITTER (Day 51) ==========
+const shareTwitterBtn = document.getElementById('share-twitter-btn');
+if (shareTwitterBtn) {
+  shareTwitterBtn.addEventListener('click', () => {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent('Check out my portfolio built over 50 days of learning! 🚀');
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+    window.open(twitterUrl, '_blank', 'width=600,height=400');
+  });
+}
+
 // ========== BACK TO TOP (Day 27: smooth animation) ==========
 const backBtn = document.getElementById('back-to-top');
 window.addEventListener('scroll', () => { backBtn.style.display = window.scrollY > 300 ? 'flex' : 'none'; });
@@ -720,7 +731,7 @@ document.addEventListener('mouseleave', () => { cursor.style.display = 'none';
 document.addEventListener('mouseenter', () => { cursor.style.display = 'block';
   cursorFollower.style.display = 'block'; });
 
-// ========== KEYBOARD SHORTCUTS (Days 16, 23, 24, 25, 43, 44, 45, 46, 47, 48) ==========
+// ========== KEYBOARD SHORTCUTS (Days 16, 23, 24, 25, 43, 44, 45, 46, 47, 48, 49) ==========
 document.addEventListener('keydown', (e) => {
   // Day 16: 'D' for dark mode
   if (e.key === 'd' || e.key === 'D') {
@@ -731,7 +742,7 @@ document.addEventListener('keydown', (e) => {
   // Day 23: '?' for help
   if (e.key === '?' || (e.shiftKey && e.key === '/')) {
     e.preventDefault();
-    showToast('⌨️ Shortcuts: D (dark mode), L (copy link), R (random project), T (scroll to top), S (skills), P (projects), C (contact), B (blog), G (GitHub activity), ? (help)', 'info');
+    showToast('⌨️ Shortcuts: D (dark mode), L (copy link), R (random project), T (scroll to top), S (skills), P (projects), C (contact), B (blog), G (GitHub activity), A (about), ? (help)', 'info');
   }
   // Day 24: 'L' for copy link
   if (e.key === 'l' || e.key === 'L') {
@@ -795,6 +806,15 @@ document.addEventListener('keydown', (e) => {
       showToast('⬇️ Scrolling to GitHub Activity!', 'success');
     }
   }
+  // Day 49: 'A' for scroll to About
+  if (e.key === 'a' || e.key === 'A') {
+    e.preventDefault();
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+      showToast('⬇️ Scrolling to About!', 'success');
+    }
+  }
 });
 
 // ========== RANDOM DEVELOPER TIP ON LOAD (Day 33) ==========
@@ -807,12 +827,18 @@ const tips = [
   '📁 Export streak data with the button.',
   '🚀 "The best way to predict the future is to create it."',
   '📌 Press "T" to scroll to top instantly.',
-  '📌 Press "S" for Skills, "P" for Projects, "C" for Contact, "B" for Blog, "G" for Activity.'
+  '📌 Press "S" for Skills, "P" for Projects, "C" for Contact, "B" for Blog, "G" for Activity, "A" for About.'
 ];
 setTimeout(() => {
   const tip = tips[Math.floor(Math.random() * tips.length)];
   showToast(tip, 'info');
 }, 1000);
+
+// ========== CONSOLE EASTER EGG (Day 50) ==========
+console.log('%c🎉 Happy 50 Days of Learning! 🎉', 'font-size: 24px; font-weight: bold; color: #e94560;');
+console.log('%cThis portfolio was built over 50 consecutive days – each day adding a small improvement.', 'font-size: 14px; color: #888;');
+console.log('%c🚀 Keep building, keep learning!', 'font-size: 16px; color: #e94560; font-weight: bold;');
+console.log('%c👨‍💻 If you\'re seeing this, you\'re a true developer!', 'font-size: 14px; color: #4caf50;');
 
 // ========== EASTER EGG: TRIPLE CLICK LOGO (Day 20) ==========
 let clickCount = 0,
@@ -925,29 +951,5 @@ if (contactForm) {
       return;
     }
     showToast('EmailJS not configured – this would send!', 'info');
-  });
-}
-// Day 49: Press 'A' to scroll to About section
-if (e.key === 'a' || e.key === 'A') {
-  e.preventDefault();
-  const aboutSection = document.getElementById('about');
-  if (aboutSection) {
-    aboutSection.scrollIntoView({ behavior: 'smooth' });
-    showToast('⬇️ Scrolling to About!', 'success');
-  }
-}
-// Day 50: Console easter egg – hidden developer message
-console.log('%c🎉 Happy 50 Days of Learning! 🎉', 'font-size: 24px; font-weight: bold; color: #e94560;');
-console.log('%cThis portfolio was built over 50 consecutive days – each day adding a small improvement.', 'font-size: 14px; color: #888;');
-console.log('%c🚀 Keep building, keep learning!', 'font-size: 16px; color: #e94560; font-weight: bold;');
-console.log('%c👨‍💻 If you\'re seeing this, you\'re a true developer!', 'font-size: 14px; color: #4caf50;');
-// Day 51: Share on Twitter button
-const shareTwitterBtn = document.getElementById('share-twitter-btn');
-if (shareTwitterBtn) {
-  shareTwitterBtn.addEventListener('click', () => {
-    const url = encodeURIComponent(window.location.href);
-    const text = encodeURIComponent('Check out my portfolio built over 50 days of learning! 🚀');
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
-    window.open(twitterUrl, '_blank', 'width=600,height=400');
   });
 }
