@@ -953,3 +953,12 @@ if (contactForm) {
     showToast('EmailJS not configured – this would send!', 'info');
   });
 }
+// Day 52: Press 'F' to focus search bar
+if (e.key === 'f' || e.key === 'F') {
+  e.preventDefault();
+  const searchInput = document.getElementById('project-search');
+  if (searchInput) {
+    searchInput.focus();
+    showToast('🔍 Search bar focused!', 'success');
+  }
+}
