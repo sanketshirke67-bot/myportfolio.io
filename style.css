@@ -888,3 +888,11 @@ body.light-mode .toast {
     width: 100%;
   }
 }
+.linkedin-btn {
+  border-color: #0a66c2;
+  color: #0a66c2;
+}
+.linkedin-btn:hover {
+  background: #0a66c2;
+  color: white;
+}

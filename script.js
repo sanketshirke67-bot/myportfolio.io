@@ -962,3 +962,12 @@ if (e.key === 'f' || e.key === 'F') {
     showToast('🔍 Search bar focused!', 'success');
   }
 }
+// Day 53: Share on LinkedIn button
+const shareLinkedinBtn = document.getElementById('share-linkedin-btn');
+if (shareLinkedinBtn) {
+  shareLinkedinBtn.addEventListener('click', () => {
+    const url = encodeURIComponent(window.location.href);
+    const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+    window.open(linkedinUrl, '_blank', 'width=600,height=400');
+  });
+}
