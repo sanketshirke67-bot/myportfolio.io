@@ -971,3 +971,12 @@ if (shareLinkedinBtn) {
     window.open(linkedinUrl, '_blank', 'width=600,height=400');
   });
 }
+// Day 55: Press 'H' to scroll to Home (Hero) section
+if (e.key === 'h' || e.key === 'H') {
+  e.preventDefault();
+  const homeSection = document.getElementById('home');
+  if (homeSection) {
+    homeSection.scrollIntoView({ behavior: 'smooth' });
+    showToast('🏠 Back to Home!', 'success');
+  }
+}
