@@ -896,3 +896,9 @@ body.light-mode .toast {
   background: #0a66c2;
   color: white;
 }
+.reset-btn {
+  background: #dc3545;
+}
+.reset-btn:hover {
+  background: #c82333;
+}

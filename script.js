@@ -980,3 +980,14 @@ if (e.key === 'h' || e.key === 'H') {
     showToast('🏠 Back to Home!', 'success');
   }
 }
+// Day 56: Reset streak data with confirmation
+const resetStreakBtn = document.getElementById('reset-streak-btn');
+if (resetStreakBtn) {
+  resetStreakBtn.addEventListener('click', () => {
+    if (confirm('⚠️ Are you sure you want to reset your entire streak data? This cannot be undone.')) {
+      localStorage.removeItem(STORAGE_KEY);
+      renderCalendar();
+      showToast('🗑️ Streak data has been reset.', 'success');
+    }
+  });
+}
