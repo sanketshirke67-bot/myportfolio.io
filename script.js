@@ -991,3 +991,13 @@ if (resetStreakBtn) {
     }
   });
 }
+// Day 57: Reading progress bar
+const readingProgressBar = document.getElementById('reading-progress-bar');
+if (readingProgressBar) {
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    readingProgressBar.style.width = `${progress}%`;
+  });
+}
