@@ -922,3 +922,9 @@ body.light-mode .reading-progress-container {
   transition: width 0.1s ease;
   border-radius: 0 2px 2px 0;
 }
+.last-modified {
+  font-size: 0.7rem;
+  color: #666;
+  margin-top: 4px;
+  opacity: 0.7;
+}

@@ -1001,3 +1001,9 @@ if (readingProgressBar) {
     readingProgressBar.style.width = `${progress}%`;
   });
 }
+// Day 58: Last modified timestamp
+const lastModifiedSpan = document.getElementById('last-modified');
+if (lastModifiedSpan) {
+  const lastModified = new Date(document.lastModified);
+  lastModifiedSpan.textContent = `📅 Last modified: ${lastModified.toLocaleString()}`;
+}
