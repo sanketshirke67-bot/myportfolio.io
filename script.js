@@ -1007,3 +1007,26 @@ if (lastModifiedSpan) {
   const lastModified = new Date(document.lastModified);
   lastModifiedSpan.textContent = `📅 Last modified: ${lastModified.toLocaleString()}`;
 }
+async function updateVisitorCount() {
+  const vSpan = document.getElementById('visitor-count');
+  try {
+    const res = await fetch('https://api.countapi.xyz/hit/sanket_portfolio_final/visitors');
+    const data = await res.json();
+    const count = data.value;
+    if (vSpan) {
+      vSpan.textContent = count;
+      // Day 59: Visitor status indicator
+      const statusSpan = document.createElement('span');
+      statusSpan.className = 'visitor-status';
+      if (count < 100) statusSpan.classList.add('green');
+      else if (count < 500) statusSpan.classList.add('yellow');
+      else statusSpan.classList.add('red');
+      // Remove old status if exists
+      const oldStatus = vSpan.parentElement.querySelector('.visitor-status');
+      if (oldStatus) oldStatus.remove();
+      vSpan.parentElement.appendChild(statusSpan);
+    }
+  } catch (e) {
+    if (vSpan) vSpan.textContent = '?';
+  }
+}
